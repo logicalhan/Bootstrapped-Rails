@@ -1,0 +1,67 @@
+@import "variables.scss";
+@mixin alert-message {
+  position: relative;
+  padding: 7px 15px;
+  margin-bottom: $baseLineHeight;
+  color: $grayDark;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  @include gradientBar(#fceec1, #eedc94); // warning by default
+  border-width: 1px;
+  border-style: solid;
+  @include border-radius(4px);
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.25));
+}
+@mixin background-border($color) {
+  background-color: $color;
+  border-color: lighten($color, 5%); 
+}
+@mixin alert-info {
+  color: $grayDark;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+@mixin alert-error {
+  @include background-border(#FDDFDE);
+
+}
+@mixin alert-success {
+  @include background-border(#D1EED1);
+}
+@mixin alert-block-message {
+      padding: 14px;
+    background-image: none;
+    background-color: lighten(#fceec1, 5%);
+    @include reset-filter; // undo gradient for IE9
+    border-color: #fceec1;
+    @include box-shadow(none);
+    ul, p {
+      margin-right: 30px;
+    }
+    ul {
+      margin-bottom: 0;
+    }
+    li {
+      color: $grayDark;
+    }
+    .alert-actions {
+      margin-top: 5px;
+    }
+}
+#flash_notice, #flash_error, #flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  @include alert-message;
+  @include alert-success;
+}
+
+#flash_error, #flash_alert {
+  @include alert-message;
+  @include alert-error;
+}
+
+.error_messages {
+  @include alert-error;
+  @include alert-block-message;
+}
