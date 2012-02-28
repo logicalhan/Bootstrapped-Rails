@@ -1,0 +1,61 @@
+@mixin pad($padding) {
+	padding: {
+		top: $padding;
+		bottom: $padding;
+		left: $padding;
+		right: $padding;
+	}
+}
+@mixin pad-lr($padding) {
+	padding: {
+		left: $padding;
+		right: $padding;
+	}
+}
+@mixin pad-tb($padding) {
+	padding: {
+		top: $padding;
+		bottom: $padding;
+	}
+}
+@mixin rotate($degree) {
+	transform:rotate($degree);
+	-ms-transform:rotate($degree); /* IE 9 */
+	-moz-transform:rotate($degree); /* Firefox */
+	-webkit-transform:rotate($degree); /* Safari and Chrome */
+	-o-transform:rotate($degree); /* Opera */
+}
+@mixin github-style-box-shadow ($border-radius) {
+	border: 1px solid #EEEEEE;
+	border-radius: $border-radius $border-radius $border-radius $border-radius;
+	box-shadow: 0 1px 1px #777777;
+	margin-bottom: 25px;
+}
+@mixin github-style-title($font-size) {
+	color: #000000;
+  font-family: Palatino,Georgia,"Times New Roman",serif;
+  font-size: $font-size;
+}
+@mixin transparency($opacity_level) {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity_level)";
+	filter: alpha(opacity=$opacity_level);
+	-moz-opacity:$opacity_level/100;
+	-khtml-opacity: $opacity_level/100;
+	opacity: $opacity_level/100;
+}
+
+@mixin better_border($color) {
+	border: {
+		top: lighten($color, 2%);
+		left: $color;
+		right: $color;
+		bottom: darken($color, 2%);
+	}
+	border-width: 1px;
+	border-style: solid;
+}
+@mixin dotted_underline($color, $display: inline-block) {
+	display: $display;
+	border-bottom: 1px dotted $color;
+}
+

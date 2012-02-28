@@ -1,0 +1,156 @@
+@mixin before_and_after {
+  content: "\00a0";
+  display: block;
+  position: absolute; 
+  width: 0;
+  height: 0;
+}
+@mixin arrow_base($border-color, $background-color, $height, $width)  {
+  border: 1px solid $border-color;
+  background: $background-color;
+  height: $height;
+  width: $width;
+  padding: 10px;
+  margin-bottom: 10px;
+  &.borderless:before {
+    @include before_and_after;
+    left: $width + 20px;
+    top: 0;
+    bottom: auto;
+    border-width: 25px;
+    border-style: solid;
+    border-color: transparent transparent transparent $border-color;
+  }
+  &.borderless:after {
+    @include before_and_after;
+    top: 0;
+    left: $width + 20px;
+    bottom: auto;
+    border-width: 25px;
+    border-style: solid;
+    border-color: transparent transparent transparent $background-color;
+  }
+  blockquote {
+    border: $border-size solid $border-color;
+    background: $background-color;
+    height: $height - 10px;
+    width: $width - 10px;
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-left: 0;
+    position: relative;
+    &:before {
+      @include before_and_after;
+      top: $height + 10px;
+      left: $width - 50px;
+      bottom: auto;
+      border-width: 15px;
+      border-style: solid;
+      border-color: $border-color transparent transparent transparent;
+    }
+    &:after {
+      @include before_and_after;
+      top: $height + 5px;
+      left: $width - 50px;
+      bottom: auto;
+      border-width: 15px;
+      border-style: solid;
+      border-color: $border-color transparent transparent transparent;
+    }
+  }
+}
+@mixin arrow_east($border-color: #456eb9, $background-color: #e7eff4, $height: 100px, $width: 500px)  {
+  @include arrow_base($border-color, $background-color, $height, $width);
+  margin-right: 50px;
+  position: relative;
+  &:before {
+    @include before_and_after;
+    top: 0;
+    left: $width + 20px;
+    bottom: auto;
+    border-width: 25px;
+    border-style: solid;
+    border-color: transparent transparent transparent $border-color;
+  }
+  &:after {
+    @include before_and_after;
+    top: 0;
+    left: $width + 19px;
+    bottom: auto;
+    border-width: 25px;
+    border-style: solid;
+    border-color: transparent transparent transparent $background-color;
+  }
+}
+@mixin arrow_south($border-color: #456eb9, $background-color: #e7eff4, $height: 100px, $width: 500px)  {
+  @include arrow_base($border-color, $background-color, $height, $width);
+  margin-bottom: 50px;
+  position: relative;
+  &:before {
+    @include before_and_after;
+    top: $height + 20px;
+    left: 0;
+    bottom: auto;
+    border-width: 25px;
+    border-style: solid;
+    border-color: $border-color transparent transparent transparent;
+  }
+  &:after {
+    @include before_and_after;
+    top: $height + 19px;
+    left: 0;
+    bottom: auto;
+    border-width: 25px;
+    border-style: solid;
+    border-color: $background-color transparent transparent transparent;
+  }
+}
+@mixin arrow_north($border-color: #456eb9, $background-color: #e7eff4, $height: 100px, $width: 500px)  {
+  @include arrow_base($border-color, $background-color, $height, $width);
+  margin-top: -15px;
+  position: relative;
+  &:before {
+    @include before_and_after;
+    top: $height / 2;
+    left: $width - 100px;
+    bottom: auto;
+    border-width: 25px;
+    border-style: solid;
+    border-color: transparent transparent $border-color transparent;
+  }
+  &:after {
+    @include before_and_after;
+    top: $height / 2 - 1px;
+    left: $width - 100px;;
+    bottom: auto;
+    border-width: 25px;
+    border-style: solid;
+    border-color: transparent transparent $background-color transparent;
+  }
+}
+
+@mixin arrow_west($border-color: #456eb9, $background-color: #e7eff4, $height: 100px, $width: 500px)  {
+  @include arrow_base($border-color, $background-color, $height, $width);
+  margin-left: 50px;
+  width: 450px;
+  position: relative;
+  &:before {
+    @include before_and_after;
+    top: 0;
+    left: $height / 2;
+    bottom: auto;
+    border-width: 25px;
+    border-style: solid;
+    border-color: transparent $border-color transparent transparent;
+  }
+  &:after {
+    @include before_and_after;
+    top: 0;
+    left: $height / 2 - 1px;
+    bottom: auto;
+    border-width: 25px;
+    border-style: solid;
+    border-color: transparent $background-color transparent transparent;
+  }
+}
+

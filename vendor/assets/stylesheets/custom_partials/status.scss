@@ -1,0 +1,38 @@
+@mixin status($color: #99CCFF) {
+  background: darken($color, 15%);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 3px 5px 2px 5px;
+  font-size: 0.8em;
+
+  &.ok, &.published, &.complete, &.completed, &.green { background: #8daa92; }
+  &.warn, &.warning, &.orange { background: #e29b20; }
+  &.error, &.errored, &.red { background: #d45f53; }
+  &.blue { background: #3366CC; }
+}
+@mixin tooltip($height, $left) {
+  span.tooltip {
+    display:none;
+  }
+  &:hover {
+    span.tooltip {
+      position: absolute; 
+      display: block; 
+      z-index: 100; 
+      font-size: 10px;
+      @include rounded-corners(3px);
+      letter-spacing: .6px;
+      background: darken(#616161, 10%);
+      font-color: $brown;
+      text-align:center;
+      color: #BEAC87;
+      padding: 5px 5px 5px 5px;
+      margin: 10px; 
+      width: 100px; 
+      padding-top: 5px; 
+      top: $height;
+      left: $left;
+    }
+  }
+}

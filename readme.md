@@ -1,6 +1,8 @@
 # This is a fork of the gem 'bootstrap-rails'
 
 As specified below, the license is being included. 
+Feel free to fork and mess around with this.
+(uses bootstrap v2)
 
 ## License
 Copyright (c) 2011 AnjLab
