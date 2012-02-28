@@ -1,0 +1,21 @@
+$best_lsat: #3333FF;
+$average_lsat: #336666;
+$last_lsat: #996699;
+$diagnostic: #663366;
+@mixin circle_background($color) {
+	display:inline-block;
+	@include gradient2($color, 5%);
+	span.number {
+		color: lighten($color, 30%);
+	}
+	&:hover {
+		@include gradient2(darken($color, 5%), 5%);
+		span.number {
+			color: lighten(darken($color, 5%), 30%);
+		}
+	}
+}
+@mixin text_background($color) {
+	background: lighten($color, 30%);
+	color: $color;
+}
