@@ -1,0 +1,30 @@
+@mixin round-right($corner_size) {
+	-moz-border-radius:0 $corner_size $corner_size 0;
+	-webkit-border-radius:0 $corner_size $corner_size 0;
+	border-radius: 0 $corner_size $corner_size 0;
+}
+@mixin round-topright($corner_size) {
+	-moz-border-radius:0 $corner_size 0 0;
+	-webkit-border-radius:0 $corner_size 0 0;
+	border-radius: 0 $corner_size 0 0;
+}
+@mixin round-left($corner_size) {
+	-moz-border-radius: $corner_size 0 0 $corner_size;
+	-webkit-border-radius:$corner_size 0 0 $corner_size;
+	border-radius: $corner_size 0 0 $corner_size;
+}
+@mixin round-bottom($corner_size) {
+	-moz-border-radius:0 0 $corner_size $corner_size;
+	-webkit-border-radius:0 0 $corner_size $corner_size;
+	border-radius: 0 0 $corner_size $corner_size;
+}
+@mixin round-top($corner_size) {
+	-moz-border-radius:$corner_size $corner_size 0 0;
+	-webkit-border-radius:$corner_size $corner_size 0 0;
+	border-radius: $corner_size $corner_size 0 0;
+}
+@mixin rounded-corners($corner_size) {
+	-moz-border-radius:$corner_size $corner_size $corner_size $corner_size;
+	-webkit-border-radius:$corner_size $corner_size $corner_size $corner_size;
+	border-radius: $corner_size $corner_size $corner_size $corner_size;
+}

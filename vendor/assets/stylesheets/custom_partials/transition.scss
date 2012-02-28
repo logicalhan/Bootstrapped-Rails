@@ -1,0 +1,25 @@
+@mixin transition($property: background, $duration: 1s, $delay: 0.25s, $ease: easeOut) {
+	transition: $property $duration;
+	-moz-transition: $property $duration; /* Firefox 4 */
+	-webkit-transition: $property $duration; /* Safari and Chrome */
+	-o-transition: $property $duration; 
+	transition-property: $property;
+	transition-duration: $duration;
+	transition-timing-function: $ease;
+	transition-delay: $delay;
+	/* Firefox 4 */
+	-moz-transition-property: $property;
+	-moz-transition-duration: $duration;
+	-moz-transition-timing-function: $ease;
+	-moz-transition-delay: $delay;
+	/* Safari and Chrome */
+	-webkit-transition-property: $property;
+	-webkit-transition-duration: $duration;
+	-webkit-transition-timing-function: $ease;
+	-webkit-transition-delay: $delay;
+	/* Opera */
+	-o-transition-property: $property;
+	-o-transition-duration: $duration;
+	-o-transition-timing-function: $ease;
+	-o-transition-delay: $delay;
+}
