@@ -2,7 +2,7 @@
 	background: -moz-linear-gradient(top, $color1 0%, $color2 100%); /* FF3.6+ */
 	background-image:-webkit-gradient(linear, 0 0%, 0 100%, from($color1), to($color2));
 }
-@mixin gradient2($color, $percentage) {
+@mixin percentage_gradient($color, $percentage) {
 	background-color: darken($color, $percentage);
   background-image: -khtml-gradient(linear, top, bottom, from($color), to(darken($color, $percentage))); // Konqueror
   background-image: -moz-linear-gradient($color, darken($color, $percentage)); // FF 3.6+
