@@ -13,11 +13,12 @@
 
 // Core variables and mixins
 @import "variables_xtra.scss";
+@import "type_xtra.scss";
 @import "mixins.scss";
 
 // Grid system and page structure
-@import "patterns.scss";
+@import "patterns_xtra.scss";
 
 // Styled patterns and elements
 
-@import "type_xtra.scss";
+
