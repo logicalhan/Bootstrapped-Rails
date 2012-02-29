@@ -4,8 +4,10 @@
 
 // ICON FONTS
 // ---------
-@font-face
-  font-family: "IconicStrokeRegular";
-  src: url("/assets/fonts/iconic_stroke.woff") format("woff");
-  src: url("/assets/fonts/iconic_stroke.svg") format('svg');
+@font-face {
+  font-family: "IconicStrokeRegular"
+  	src: url("/assets/fonts/iconic_stroke.woff") format("woff");
+
+  src: url("/assets/fonts/iconic_stroke.svg#iconic_stroke") format('svg');
   src: url("/assets/fonts/iconic_stroke.ttf") format('ttf');
+}
