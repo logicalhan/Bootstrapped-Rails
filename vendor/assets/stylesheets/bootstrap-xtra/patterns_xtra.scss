@@ -13,7 +13,7 @@
         margin: 0 0.55em 0 -0.25em;
       }
       &.alternative:before {
-          color: @alternativeIconColor;
+          color: $alternativeIconColor;
       }
       &.right:before {
           float:right;
