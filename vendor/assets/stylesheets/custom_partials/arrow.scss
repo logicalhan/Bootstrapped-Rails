@@ -5,7 +5,7 @@
   width: 0;
   height: 0;
 }
-@mixin arrow_base($border-color, $background-color, $height, $width)  {
+@mixin arrow_base($border-color, $border-size, $background-color, $height, $width)  {
   border: 1px solid $border-color;
   background: $background-color;
   height: $height;
@@ -59,8 +59,8 @@
     }
   }
 }
-@mixin arrow_east($border-color: #456eb9, $background-color: #e7eff4, $height: 100px, $width: 500px)  {
-  @include arrow_base($border-color, $background-color, $height, $width);
+@mixin arrow_east($border-color: #456eb9, $background-color: #e7eff4, $border-size: 1px, $height: 100px, $width: 500px)  {
+  @include arrow_base($border-color, $border-size, $background-color, $height, $width);
   margin-right: 50px;
   position: relative;
   &:before {
@@ -82,8 +82,8 @@
     border-color: transparent transparent transparent $background-color;
   }
 }
-@mixin arrow_south($border-color: #456eb9, $background-color: #e7eff4, $height: 100px, $width: 500px)  {
-  @include arrow_base($border-color, $background-color, $height, $width);
+@mixin arrow_south($border-color: #456eb9, $background-color: #e7eff4, $border-size: 1px, $height: 100px, $width: 500px)  {
+  @include arrow_base($border-color, $border-size, $background-color, $height, $width);
   margin-bottom: 50px;
   position: relative;
   &:before {
@@ -105,13 +105,13 @@
     border-color: $background-color transparent transparent transparent;
   }
 }
-@mixin arrow_north($border-color: #456eb9, $background-color: #e7eff4, $height: 100px, $width: 500px)  {
-  @include arrow_base($border-color, $background-color, $height, $width);
+@mixin arrow_north($border-color: #456eb9, $background-color: #e7eff4, $border-size: 1px, $height: 100px, $width: 500px)  {
+  @include arrow_base($border-color, $border-size, $background-color, $height, $width);
   margin-top: -15px;
   position: relative;
   &:before {
     @include before_and_after;
-    top: $height / 2;
+    top: -50px;
     left: $width - 100px;
     bottom: auto;
     border-width: 25px;
@@ -120,7 +120,7 @@
   }
   &:after {
     @include before_and_after;
-    top: $height / 2 - 1px;
+    top: -49px;
     left: $width - 100px;;
     bottom: auto;
     border-width: 25px;
@@ -129,10 +129,10 @@
   }
 }
 
-@mixin arrow_west($border-color: #456eb9, $background-color: #e7eff4, $height: 100px, $width: 500px)  {
-  @include arrow_base($border-color, $background-color, $height, $width);
+@mixin arrow_west($border-color: #456eb9, $background-color: #e7eff4, $border-size: 1px, $height: 100px, $width: 500px)  {
+  @include arrow_base($border-color, $border-size, $background-color, $height, $width);
   margin-left: 50px;
-  width: 450px;
+  width: $width - 50px;
   position: relative;
   &:before {
     @include before_and_after;
