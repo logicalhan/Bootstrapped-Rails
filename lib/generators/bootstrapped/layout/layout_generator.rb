@@ -20,7 +20,7 @@ module Bootstrapped
         template "_bootstrapped-navigation.html.#{ext}", "app/views/layouts/_bootstrapped-navigation.html.#{ext}"
         # Add our own require:
         layout_name_here = "  layout '#{layout_name}'\n"
-        insert_into_file "app/controllers/application_controller.rb'", layout_name_here, :after => "protect_from_forgery\n"
+        insert_into_file "app/controllers/application_controller.rb", layout_name_here, :after => "protect_from_forgery\n"
       end
     end
   end
