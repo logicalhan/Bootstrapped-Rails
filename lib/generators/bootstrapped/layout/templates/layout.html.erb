@@ -22,28 +22,7 @@
   </head>
   <body>
 
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <%- if layout_type == "fluid" -%>
-          <div class="container-fluid">
-        <%- else -%>
-          <div class="container">
-        <%- end -%>
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#"><%= app_name %></a>
-          <div class="<%= container_class %> nav-collapse">
-            <ul class="nav">
-              <%- (1..3).each do |i| -%>
-                <li><%%= link_to "Link<%= i %>", "#"  %></li>
-              <%- end -%>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
+    <%%= render partial: "layouts/bootstrapped-navigation" %>
     </div>
 
     <div class="<%= container_class %>">
@@ -83,7 +62,7 @@
         </div><!--/row-->
       </div><!--/content-->
       <%- end -%>
-      
+
       <footer class='well'>
         <p>&copy; Company 2012</p>
       </footer>

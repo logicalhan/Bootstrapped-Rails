@@ -1,6 +1,6 @@
 require 'rails/generators'
 
-module Bootstrappped
+module Bootstrapped
   module Generators
     class LayoutGenerator < ::Rails::Generators::Base
       source_root File.expand_path("../templates", __FILE__)
@@ -17,6 +17,7 @@ module Bootstrappped
         @container_class = layout_type == "fluid" ? "container-fluid" : "container"
         ext = app.config.generators.options[:rails][:template_engine] || :erb
         template "layout.html.#{ext}", "app/views/layouts/#{layout_name}.html.#{ext}"
+        template "_bootstrapped-navigation.html.#{ext}", "app/views/layouts/_bootstrapped-navigation.html.#{ext}"
       end
     end
   end
