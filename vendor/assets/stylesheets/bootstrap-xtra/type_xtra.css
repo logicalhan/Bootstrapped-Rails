@@ -1,0 +1,12 @@
+/* TypographyXtra.less
+ * Headings, body text, lists, code, and more for a versatile and durable typography system
+ * ---------------------------------------------------------------------------------------- */
+
+// ICON FONTS
+// ---------
+@font-face {
+  font-family: "IconicStrokeRegular";
+  src: url("/assets/fonts/iconic_stroke.woff") format("woff");
+  src: url("/assets/fonts/iconic_stroke.svg#iconic_stroke") format('svg');
+  src: url("/assets/fonts/iconic_stroke.ttf") format('ttf');
+}
