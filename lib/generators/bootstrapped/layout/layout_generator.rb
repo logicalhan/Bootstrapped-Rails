@@ -19,9 +19,11 @@ module Bootstrapped
         template "layout.html.#{ext}", "app/views/layouts/#{layout_name}.html.#{ext}"
         template "_bootstrapped-navigation.html.#{ext}", "app/views/layouts/_bootstrapped-navigation.html.#{ext}"
         # Add our own require:
-        layout_name_here = "  layout '#{layout_name}'\n"
-        insert_into_file "app/controllers/application_controller.rb", layout_name_here, :after => "protect_from_forgery\n"
+        
       end
+      def application_controller_should_default_use_newly_generated_layout
+        layout_name_here = "  layout \'#{layout_name}\'\n"
+        insert_into_file "app/controllers/application_controller.rb", layout_name_here, after: "protect_from_forgery\n"
     end
   end
 end
