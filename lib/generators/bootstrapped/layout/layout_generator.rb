@@ -18,6 +18,9 @@ module Bootstrapped
         ext = app.config.generators.options[:rails][:template_engine] || :erb
         template "layout.html.#{ext}", "app/views/layouts/#{layout_name}.html.#{ext}"
         template "_bootstrapped-navigation.html.#{ext}", "app/views/layouts/_bootstrapped-navigation.html.#{ext}"
+        # Add our own require:
+        layout_name_here = "  layout '#{layout_name}'\n"
+        insert_into_file "app/controllers/application_controller.rb'", layout_name_here, :after => "protect_from_forgery\n"
       end
     end
   end
