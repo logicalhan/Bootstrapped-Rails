@@ -23,9 +23,10 @@ module Bootstrapped
       end
       def application_controller_should_default_use_newly_generated_layout
         layout_name_here = %Q{  layout \'#{layout_name}\'\n}
-        insert_into_file(%Q{app/controllers/application_controller.rb}, after: "protect_from_forgery\n") do
+        insert_into_file('app/controllers/application_controller.rb', after: "protect_from_forgery\n") do
           layout_name_here
         end
+      end
     end
   end
 end
