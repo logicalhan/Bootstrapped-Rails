@@ -1,4 +1,4 @@
-# This is a fork of the gem 'bootstrap-rails'
+# This is a hacked-together version of the gem 'bootstrap-rails', with the generators from 'twitter-bootstrap-rails', has also replaced the Glyphicons icons with [Font Awesome](http://fortawesome.github.com/Font-Awesome/), since svg icons are resizable and colorable and such. There are also some custom scss helpers in a folder called 'custom_partials', which are just a byproduct of trying not to hate css. Feel free to muck around with this as you please. 
 
 As specified below, the license is being included. 
 Feel free to fork and mess around with this.
@@ -6,6 +6,13 @@ Feel free to fork and mess around with this.
 
 ## License
 Copyright (c) 2011 AnjLab
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## License
+Copyright (c) 2011 Seyhun Akyürek
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.

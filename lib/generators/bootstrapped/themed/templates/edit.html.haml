@@ -1,0 +1,2 @@
+= form_for @<%= resource_name %>, :html => { :class => "edit_<%= resource_name %> form-horizontal", :id => "edit_<%= resource_name %>" } do |f|
+  = render :partial => "form", :locals => {:f => f}
