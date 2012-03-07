@@ -4,6 +4,8 @@ As specified below, the license is being included.
 Feel free to fork and mess around with this.
 (uses bootstrap v2)
 
+
+
 ## License
 Copyright (c) 2011 AnjLab
 
@@ -17,6 +19,62 @@ Copyright (c) 2011 Seyhun Akyürek
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Installing Gem
+
+Include Bootstrap in Gemfile;
+
+    gem "bootstrapped-rails"
+
+You can run bundle from command line
+
+    bundle install
+
+
+## Installing to App (using Generators)
+
+You can run following generators to get started with Twitter Bootstrap quickly.
+
+
+Install (requires directives to Asset pipeline.)
+
+
+Usage:
+
+
+    rails g bootstrapped:install
+
+
+Layout (generates Twitter Bootstrap compatible layout) - (Haml and Slim supported)
+
+
+Usage:
+
+
+    rails g bootstrapped:layout [LAYOUT_NAME] [*ﬁxed or ﬂuid]
+
+
+Example:
+
+
+    rails g bootstrapped:layout application fixed
+
+
+Themed (generates Twitter Bootstrap compatible scaffold views.) 
+
+
+Usage:
+
+
+    rails g bootstrapped:themed [RESOURCE_NAME]
+
+
+Example:
+
+
+    rails g scaffold post title:string description:text
+    rake db:migrate
+    rails g bootstrapped:themed posts
 
 ## Custom Modules
 Can be imported with the following import commands at the top of your scss file. 
