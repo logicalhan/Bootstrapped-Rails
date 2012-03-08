@@ -18,6 +18,8 @@ module Bootstrapped
         ext = app.config.generators.options[:rails][:template_engine] || :erb
         template "layout.html.#{ext}", "app/views/layouts/#{layout_name}.html.#{ext}"
         template "_bootstrapped-navigation.html.#{ext}", "app/views/layouts/_bootstrapped-navigation.html.#{ext}"
+        template '_apple_icon.html.erb', "app/views/layouts/_apple_icon.html.#{ext}"
+        template '_sidebar.html.erb', "app/views/layouts/_sidebar.html.#{ext}"
         # Add our own require:
         
       end
