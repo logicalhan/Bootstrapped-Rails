@@ -122,7 +122,7 @@
   @include button-background($primaryButtonBackground, adjust-hue($primaryButtonBackground, 20));
   &:hover {
     @include button-background(darken($primaryButtonBackground, 6.2%), adjust-hue(darken($primaryButtonBackground, 6.2%), 20));
-    @include transition(background-position .1s linear);
+    @include transition(background-position .2s linear);
   }
 }
 // Warning appears are orange
@@ -130,7 +130,7 @@
   @include button-background(lighten($orange, 15%), $orange);
   &:hover { 
     @include button-background(darken($orange, 6.2%), adjust-hue(darken($orange, 6.2%), 20));
-    @include transition(background-position .1s linear);
+    @include transition(background-position .2s linear);
   }
 }
 // Danger and error appear as red
@@ -138,7 +138,7 @@
   @include button-background(#ee5f5b, #bd362f);
   &:hover {
     @include button-background(darken(#ee5f5b, 6.2%), adjust-hue(darken(#bd362f, 6.2%), 20));
-@include transition(background-position .1s linear);
+@include transition(background-position .2s linear);
   }
 }
 // Success appears as green
@@ -146,7 +146,7 @@
   @include button-background(#62c462, #51a351);
   &:hover {
     @include button-background(darken(#62c462, 6.2%), adjust-hue(darken(#51a351, 6.2%), 20));
-    @include transition(background-position .1s linear);
+    @include transition(background-position .2s linear);
   }
 }
 // Info appears as a neutral blue
@@ -154,10 +154,16 @@
   @include button-background(#5bc0de, #2f96b4);
   &:hover {
     @include button-background(darken(#5bc0de, 6.2%), adjust-hue(darken(#2f96b4, 6.2%), 20));
-    @include transition(background-position .1s linear);
+    @include transition(background-position .2s linear);
   }
 }
-
+.btn-inverse, .btn.btn-inverse {
+  @include button-background(#454545, #262626);
+  &:hover {
+    @include button-background(darken(#454545, 6.2%), adjust-hue(darken(#262626, 6.2%), 20));
+    @include transition(background-position .2s linear);
+  }
+}
 
 // Cross-browser Jank
 // --------------------------------------------------
