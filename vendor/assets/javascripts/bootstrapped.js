@@ -9,6 +9,4 @@
 //= require bootstrapped/bootstrap-tooltip
 //= require bootstrapped/bootstrap-popover
 //= require bootstrapped/bootstrap-typeahead
-
-
-
+//= require bootstrapped/jquery-cookie
