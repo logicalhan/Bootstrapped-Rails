@@ -1,3 +1,4 @@
+@import 'custom_partials/transition';
 // BUTTON STYLES
 // -------------
 
@@ -25,11 +26,10 @@
     color: $grayDark;
     text-decoration: none;
     // background-color: darken($white, 10%);
-    background-position: 0 35px;
     @include gradient-vertical-three-colors(darken($white, 6.2%), darken($white, 6.2%), 25%, darken($white, 16.2%)); 
     // transition is only when going to hover, otherwise the background
     // behind the gradient (there for IE<=9 fallback) gets mismatched
-    @include transition(background-position .1s linear);
+    @include transition;
   }
   // Give IE7 some love
   @include ie7-restore-left-whitespace();
