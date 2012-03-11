@@ -29,7 +29,7 @@
     @include gradient-vertical-three-colors(darken($white, 6.2%), darken($white, 6.2%), 25%, darken($white, 16.2%)); 
     // transition is only when going to hover, otherwise the background
     // behind the gradient (there for IE<=9 fallback) gets mismatched
-    @include transition;
+    @include transition2;
   }
   // Give IE7 some love
   @include ie7-restore-left-whitespace();
