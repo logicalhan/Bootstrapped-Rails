@@ -1,8 +1,0 @@
-// GRID SYSTEM
-// -----------
-
-// Fixed (940px)
-@include grid-system-generate($gridColumns, $gridColumnWidth, $gridGutterWidth);
-
-// Fluid (940px)
-@include fluid-grid-system-generate($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth);

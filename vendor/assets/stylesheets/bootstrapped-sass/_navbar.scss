@@ -53,17 +53,21 @@
   // Hover and active states
   .brand:hover {
     text-decoration: none;
+    color: #222;
   }
   // Website or project name
   .brand {
-    float: left;
-    display: block;
-    padding: 8px 20px 12px;
-    margin-left: -20px; // negative indent to left-align the text down the page
-    font-size: 20px;
-    font-weight: 200;
-    line-height: 1;
-    color: $white;
+    -moz-transition: all 0.2s linear 0s;
+    color: #000000;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.125);
   }
   // Plain text in topbar
   .navbar-text {
