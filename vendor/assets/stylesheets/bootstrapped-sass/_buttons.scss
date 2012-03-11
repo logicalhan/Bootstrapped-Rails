@@ -31,7 +31,7 @@
 
 // Hover state
 .btn:hover {
-  color: $grayDark;
+  color: lighten($grayDark, 5%);
   text-decoration: none;
   background-color: darken($white, 10%);
   background-position: 0 -15px;
