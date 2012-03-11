@@ -18,8 +18,8 @@
 // -------------------------
 // Required since we compile the responsive stuff separately
 
-@import "bootstrap/variables"; // Modify this for custom colors, font-sizes, etc
-@import "bootstrap/mixins";
+@import "bootstrapped-sass/variables"; // Modify this for custom colors, font-sizes, etc
+@import "bootstrapped-sass/mixins";
 
 
 // RESPONSIVE CLASSES
