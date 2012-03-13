@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Han"]
   s.email       = ["han@logicalprep.com"]
   s.homepage    = ""
-  s.summary     = %q{ Personal fork of the gem bootstrap-rails }
-  s.description = %q{ please see summary }
+  s.summary     = %q{ A mashed together version of bootstrap-sass and twitter-bootstrap-rails, with generators. Also now has breadcrumb support, and some bourbon like scss helpers. }
+  s.description = %q{ This is a hacked-together version of the gem 'bootstrap-sass', with the generators from 'twitter-bootstrap-rails', has also replaced the Glyphicons icons with [Font Awesome](http://fortawesome.github.com/Font-Awesome/), since svg icons are resizable and colorable and such. There are also some custom scss helpers in a folder called 'custom_partials', which are just a byproduct of trying not to hate css. The nature of those scss helpers are very similar in look and feel to the bourbon gem by thoughtbot, which seems more complete than my own (to be honest) but when I had started accumulating helpers, I was not aware of the gem. Feel free to muck around with this as you please.  }
 
   s.rubyforge_project = "bootstrapped-rails"
 
