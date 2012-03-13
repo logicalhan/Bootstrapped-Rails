@@ -62,24 +62,14 @@ Example:
     rails g bootstrapped:themed posts
 ## Breadcrumbs (shamelessly ripped off of github)
 as quoted by [li](https://github.com/ji)
-"
-Adds breadcrumbs to twitter-bootstrap-rails
-No milestone
-No one is assigned
 
-Usage.
-
-Add this to Your application_layout.html.erb:
-
-<%= render_breadcrumbs %>
-<%= yield %>
-
-Add this to Your controller (i.e. ProductsController):
-
-add_breadcrumb "New Product", "/products/new", only: [:new, :create]
-
-That's it.
-"
+> Usage.
+> Add this to Your application_layout.html.erb:
+> <%= render_breadcrumbs %>
+> <%= yield %>
+> Add this to Your controller (i.e. ProductsController):
+> add_breadcrumb "New Product", "/products/new", only: [:new, :create]
+> That's it.
 
 ## Custom Modules
 Can be imported with the following import commands at the top of your scss file. 
