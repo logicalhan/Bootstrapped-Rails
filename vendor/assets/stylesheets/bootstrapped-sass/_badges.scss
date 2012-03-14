@@ -1,0 +1,44 @@
+.badge {
+    background-color: #999999;
+    border-radius: 9px 9px 9px 9px;
+    color: #FFFFFF;
+    font-size: 12.025px;
+    font-weight: bold;
+    padding: 1px 9px 2px;
+    white-space: nowrap;
+}
+.badge:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: none;
+}
+.badge-error {
+    background-color: #B94A48;
+}
+.badge-error:hover {
+    background-color: #953B39;
+}
+.badge-warning {
+    background-color: #F89406;
+}
+.badge-warning:hover {
+    background-color: #C67605;
+}
+.badge-success {
+    background-color: #468847;
+}
+.badge-success:hover {
+    background-color: #356635;
+}
+.badge-info {
+    background-color: #3A87AD;
+}
+.badge-info:hover {
+    background-color: #2D6987;
+}
+.badge-inverse {
+    background-color: #333333;
+}
+.badge-inverse:hover {
+    background-color: #1A1A1A;
+}
