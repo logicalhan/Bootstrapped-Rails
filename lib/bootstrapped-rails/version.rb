@@ -1,5 +1,5 @@
 module Bootstrapped
   module Rails
-    VERSION = "2.0.7.7"
+    VERSION = "2.0.7.8"
   end
 end
