@@ -1,43 +1,32 @@
 .badge {
-    background-color: #999999;
-    border-radius: 9px 9px 9px 9px;
-    color: #FFFFFF;
-    font-size: 12.025px;
-    font-weight: bold;
-    padding: 1px 9px 2px;
+  padding: 1px 9px 2px;
+  font-size: $baseFontSize * .925;
+  font-weight: bold;
+  white-space: nowrap;
+  color: $white;
+  background-color: $grayLight;
+  @include border-radius(9px);
 }
+
+// Hover state
 .badge:hover {
-    color: #FFFFFF;
-    cursor: pointer;
-    text-decoration: none;
+  color: $white;
+  text-decoration: none;
+  cursor: pointer;
 }
-.badge-error {
-    background-color: #B94A48;
-}
-.badge-error:hover {
-    background-color: #953B39;
-}
-.badge-warning {
-    background-color: #F89406;
-}
-.badge-warning:hover {
-    background-color: #C67605;
-}
-.badge-success {
-    background-color: #468847;
-}
-.badge-success:hover {
-    background-color: #356635;
-}
-.badge-info {
-    background-color: #3A87AD;
-}
-.badge-info:hover {
-    background-color: #2D6987;
-}
-.badge-inverse {
-    background-color: #333333;
-}
-.badge-inverse:hover {
-    background-color: #1A1A1A;
-}
+
+// Colors
+.badge-error { background-color: $errorText; }
+.badge-error:hover { background-color: darken($errorText, 10%); }
+
+.badge-warning { background-color: $orange; }
+.badge-warning:hover { background-color: darken($orange, 10%); }
+
+.badge-success { background-color: $successText; }
+.badge-success:hover { background-color: darken($successText, 10%); }
+
+.badge-info { background-color: $infoText; }
+.badge-info:hover { background-color: darken($infoText, 10%); }
+
+.badge-inverse { background-color: $grayDark; }
+.badge-inverse:hover { background-color: darken($grayDark, 10%); }

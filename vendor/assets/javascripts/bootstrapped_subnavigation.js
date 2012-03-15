@@ -1,6 +1,7 @@
 //= require_self
 $(function() {
 	$("body").attr("data-spy", "scroll").attr("data-target", ".subnav").attr('data-offset', "50");
+	
 	$(document).scroll(function(){
 		// If has not activated (has no attribute "data-top"
 		if (!$('.subnav').attr('data-top')) {
