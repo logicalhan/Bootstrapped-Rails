@@ -1,6 +1,3 @@
-// WELLS
-// -----
-
 .well {
   min-height: 20px;
   padding: 19px;
@@ -14,4 +11,14 @@
     border-color: #ddd;
     border-color: rgba(0,0,0,.15);
   }
+}
+
+// Sizes
+.well-large {
+  padding: 24px;
+  @include border-radius(6px);
+}
+.well-small {
+  padding: 9px;
+  @include border-radius(3px);
 }
