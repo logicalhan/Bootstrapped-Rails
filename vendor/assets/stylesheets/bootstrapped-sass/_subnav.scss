@@ -106,3 +106,19 @@
 .subnav .nav > li:first-child > a, .subnav .nav > li:first-child > a:hover {
     border-radius: 0 0 0 0;
 }
+#outer_subnav {
+  width: 100%;
+  text-align:center;
+  .subnav {
+    display:inline-block;
+    width:938px;
+  }
+  .subnav-fixed {
+    width:100%;
+    display:inline-block;
+    text-align:center;
+    .nav {
+      display:inline-block;
+    }
+  }
+}
